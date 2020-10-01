@@ -1,0 +1,19 @@
+.select {
+  grid-area: quantity;
+  min-height: 50px;
+  border: 2px solid dodgerblue;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 12px;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.option {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+}

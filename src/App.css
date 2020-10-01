@@ -1,38 +1,62 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 10vh auto 0;
+  max-width: 600px;
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.list {
+  list-style-type: none;
+  text-align: left;
+  padding: 0;
+  grid-area: list;
+}
+
+.field {
+  display: grid;
+  grid-template-columns: auto 70px;
+  grid-template-areas:
+  'search quantity'
+  'spinner spinner'
+  'list list';
+  grid-area: search;
+  column-gap: 15px;
+  box-sizing: border-box;
+  font-size: 16px;
+  margin: 0;
+}
+
+.input {
+  grid-area: search;
+  min-height: 50px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 12px;
+  background-color: whitesmoke;
+  font-size: 16px;
+  margin: 0;
+  border: 2px solid dodgerblue;
+}
+
+.select {
+  grid-area: quantity;
+  min-height: 50px;
+  border: 2px solid dodgerblue;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 12px;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.spinner{
+  grid-area: spinner;
 }

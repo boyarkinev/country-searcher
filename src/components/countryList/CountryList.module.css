@@ -1,0 +1,20 @@
+.itemContainer {
+  display: grid;
+  grid-template-columns: 6fr 3fr 50px;
+  gap: 10px;
+  padding: 5px 8px;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.flag {
+  width: 50px;
+  height: auto;
+}
+
+.text {
+  font-family: Arial;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0;
+}
