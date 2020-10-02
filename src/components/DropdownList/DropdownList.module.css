@@ -1,10 +1,8 @@
 .select {
   grid-area: quantity;
-  min-height: 50px;
   border: 2px solid dodgerblue;
   border-radius: 5px;
   box-sizing: border-box;
-  padding: 12px;
   font-size: 16px;
   line-height: 22px;
   font-weight: normal;

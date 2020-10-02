@@ -1,6 +1,6 @@
 .itemContainer {
   display: grid;
-  grid-template-columns: 6fr 3fr 50px;
+  grid-template-columns: 6fr 4fr 50px;
   gap: 10px;
   padding: 5px 8px;
   box-sizing: border-box;

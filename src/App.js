@@ -7,19 +7,18 @@ import DropdownList from './components/DropdownList/DropdownList';
 const countriesApi = new CountriesApi();
 
 const App = () => {
-
   const [input, setInput] = useState('');
-  const [countriesData, setCountriesData] = useState([])
-  const [dropdown, setDropdown] = useState()
+  const [countriesData, setCountriesData] = useState([]);
+  // const [dropdown, setDropdownList] = useState();
 
   const handleChange = (e) => {
     e.preventDefault();
     setInput(e.target.value);
     if (!e.target.value) {
-      setCountriesData([])
+      setCountriesData([]);
     } else {
       countriesApi.getCountries(e.target.value).then((res) => {
-        setCountriesData(res)
+        setCountriesData(res);
       });
     }
   };
@@ -32,9 +31,10 @@ const App = () => {
       key={i}
     />
   ));
-  
+
   return (
     <div className='App'>
+      <h1 className='title'>Country Search Service</h1>
       <div className='field'>
         <input
           type='text'
@@ -44,9 +44,7 @@ const App = () => {
           className='input'
         />
         <DropdownList />
-        <ul className='list'>
-          {countriesList}
-        </ul>
+        <ul className='list'>{countriesList}</ul>
       </div>
     </div>
   );

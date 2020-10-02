@@ -15,7 +15,7 @@ const DropdownList = () => {
     <Select className={classes.select} defaultValue="50" onChange={onChange}>
       <Option value="ten">10</Option>
       <Option value="twenty">20</Option>
-      <Option value="fifty">30</Option>
+      <Option value="fifty">50</Option>
     </Select>
   );
 };
