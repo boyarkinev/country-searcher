@@ -5,65 +5,9 @@
   justify-content: center;
   margin: 0 auto;
   max-width: 600px;
+  padding: 0 20px;
 }
 
 .App-link {
   color: #61dafb;
-}
-
-.list {
-  list-style-type: none;
-  text-align: left;
-  padding: 0;
-  grid-area: list;
-}
-
-.title {
-  margin: 10vh 0 20px;
-  font-size: 28px;
-  line-height: 40px;
-  color: #555;
-}
-
-.field {
-  display: grid;
-  grid-template-columns: auto 70px;
-  grid-template-areas:
-  'search quantity'
-  'spinner spinner'
-  'list list';
-  grid-area: search;
-  column-gap: 15px;
-  row-gap: 15px;
-  box-sizing: border-box;
-  font-size: 16px;
-  margin: 0;
-}
-
-.input {
-  grid-area: search;
-  border-radius: 5px;
-  box-sizing: border-box;
-  padding: 0 12px;
-  background-color: whitesmoke;
-  font-size: 16px;
-  margin: 0;
-  border: 2px solid dodgerblue;
-}
-
-.select {
-  grid-area: quantity;
-  min-height: 50px;
-  border: 2px solid dodgerblue;
-  border-radius: 5px;
-  box-sizing: border-box;
-  padding: 12px;
-  font-size: 16px;
-  line-height: 22px;
-  font-weight: normal;
-  margin: 0;
-}
-
-.spinner{
-  grid-area: spinner;
 }

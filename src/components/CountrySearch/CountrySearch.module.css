@@ -1,0 +1,45 @@
+.title {
+  margin: 10vh 0 20px;
+  font-size: 28px;
+  line-height: 40px;
+  color: #555;
+}
+
+@media (max-width: 400px) {
+  .title {
+    font-size: 24px;
+  }
+}
+
+.form {
+  display: grid;
+  grid-template-columns: auto 70px;
+  grid-template-areas:
+  'search quantity'
+  'spinner spinner'
+  'list list';
+  grid-area: search;
+  column-gap: 15px;
+  row-gap: 15px;
+  box-sizing: border-box;
+  font-size: 16px;
+  margin: 0;
+}
+
+.input {
+  grid-area: search;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 0 12px;
+  background-color: whitesmoke;
+  font-size: 16px;
+  margin: 0;
+  border: 2px solid dodgerblue;
+}
+
+.list {
+  list-style-type: none;
+  text-align: left;
+  padding: 0;
+  grid-area: list;
+}
