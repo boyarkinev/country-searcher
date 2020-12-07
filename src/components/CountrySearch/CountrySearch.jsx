@@ -1,27 +1,23 @@
+import './CountrySearch.css';
+
 import React, { useState } from 'react';
-import CountriesApi from './../modules/CountriesApi';
+
+import getCountries from '../utils/get-countries';
 import CountryList from './СountryList/CountryList';
 import DropdownList from './DropdownList/DropdownList';
-import classes from './CountrySearch.module.css';
 
 const CountrySearch = () => {
-  const countriesApi = new CountriesApi();
-
   const [input, setInput] = useState('');
   const [countriesData, setCountriesData] = useState([]);
+  const [customSelectValue, setCustomSelectValue] = useState('50');
 
-  const handleChange = (e) => {
-    e.preventDefault();
+  const handleInputChange = (e) => {
     setInput(e.target.value);
-    if (!e.target.value) {
-      setCountriesData([]);
-    } else {
-      countriesApi.getCountries(e.target.value).then((res) => {
-        setCountriesData(res);
-      });
-    }
+    !e.target.value
+      ? setCountriesData([])
+      : getCountries(e.target.value).then(res => setCountriesData(res));
   };
-
+  
   const countriesList = countriesData.map((country, i) => (
     <CountryList
       name={country.name}
@@ -31,20 +27,27 @@ const CountrySearch = () => {
     />
   ));
 
+  const handleSelectChange = (e) => {
+    setCustomSelectValue(e.target.value);
+    if (e.target.value) {
+      countriesList.slice(0, `${e.target.value}`)
+    }
+  }
+
   return (
     <div>
-      <h1 className={classes.title}>Country Search Service</h1>
-      <form className={classes.form}>
+      <h1 className='title'>Country Search Service</h1>
+      <form className='form'>
         <input
           type='text'
           placeholder='Search...'
-          onChange={handleChange}
+          onChange={handleInputChange}
           value={input}
-          className={classes.input}
+          className='input'
         />
-        <DropdownList />
+        <DropdownList value={customSelectValue} onChange={handleSelectChange} />
       </form>
-        <ul className={classes.list}>{countriesList}</ul>
+      <ul className='list'>{countriesList.slice(0, `${customSelectValue}`)}</ul>
     </div>
   );
 };

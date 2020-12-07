@@ -1,22 +1,15 @@
+import './DropdownList.css'
+
 import React from 'react';
-import { Select } from 'antd';
-import 'antd/dist/antd.css';
-import classes from './DropdownList.module.css'
 
-const DropdownList = () => {
-
-  const { Option } = Select;
-
-  function onChange(value) {
-    console.log(`selected ${value}`);
-  }
+const DropdownList = (props) => {
 
   return (
-    <Select className={classes.select} defaultValue="50" onChange={onChange}>
-      <Option value="ten">10</Option>
-      <Option value="twenty">20</Option>
-      <Option value="fifty">50</Option>
-    </Select>
+    <select className='select' defaultValue="50" onChange={props.onChange}>
+      <option value="50">50</option>
+      <option value="20">20</option>
+      <option value="10">10</option>
+    </select>
   );
 };
 
