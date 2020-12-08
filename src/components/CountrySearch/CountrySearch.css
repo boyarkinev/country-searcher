@@ -29,6 +29,7 @@
 
 .input {
   grid-area: search;
+  min-height: 40px;
   border-radius: 5px;
   box-sizing: border-box;
   padding: 0 12px;
@@ -37,10 +38,6 @@
   margin: 0;
   border: 2px solid dodgerblue;
 }
-
-/* .input::placeholder {
-  color: red;
-} */
 
 .list {
   list-style-type: none;

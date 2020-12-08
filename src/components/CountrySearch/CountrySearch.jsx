@@ -28,7 +28,9 @@ const CountrySearch = () => {
       ? setCountriesData([])
       : getCountries(e.target.value)
           .then(res => {
+            setIsLoading(true)
             setCountriesData(res);
+            setIsLoading(false)
           })
           .catch(err => console.log(err));
   };
