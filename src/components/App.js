@@ -2,13 +2,13 @@ import './App.css';
 
 import React from 'react';
 
-import CountrySearch from './CountrySearch/CountrySearch';
+import CountrySearchContainer from './CountrySearch/CountrySearchContainer';
 
-const App = () => {
+const App = (props) => {
 
   return (
     <div className='App'>
-      <CountrySearch />
+      <CountrySearchContainer />
     </div>
   );
 };

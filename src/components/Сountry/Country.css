@@ -1,10 +1,15 @@
-.itemContainer {
+.item-container {
   display: grid;
   grid-template-columns: 6fr 4fr 50px;
   gap: 10px;
   padding: 5px 8px;
   box-sizing: border-box;
   align-items: center;
+  cursor: pointer;
+}
+
+.item-container:hover .text {
+  color: rgba(82, 95, 55, 0.8);
 }
 
 .flag {
@@ -17,4 +22,5 @@
   font-size: 16px;
   line-height: 24px;
   margin: 0;
+  transition: color .2s;
 }

@@ -1,0 +1,24 @@
+.search-result {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  padding: 0;
+  list-style-type: none;
+}
+
+.search-result li {
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0;
+  text-align: center;
+  padding: 5px;
+}
+
+.search-result_header {
+  color: rgba(82, 95, 55, 1);
+  font-weight: bold;
+  border-bottom: 1px solid #61dafb;
+}
+
+.search-result-item {
+    
+}

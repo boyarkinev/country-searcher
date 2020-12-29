@@ -1,8 +1,8 @@
-import './DropdownList.css'
+import './ResultList.css'
 
 import React from 'react';
 
-const DropdownList = (props) => {
+const ResultList = (props) => {
 
   return (
     <select className='select' defaultValue="50" onChange={props.onChange}>
@@ -13,4 +13,4 @@ const DropdownList = (props) => {
   );
 };
 
-export default DropdownList;
+export default ResultList;
