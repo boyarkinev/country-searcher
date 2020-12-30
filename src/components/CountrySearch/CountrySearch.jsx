@@ -2,7 +2,7 @@ import './CountrySearch.css';
 
 import React, { useState } from 'react';
 
-import Country from '../Сountry/Country';
+import SearchResult from '../SearchResult/SearchResult';
 import SearchFormContainer from '../SearchForm/SearchFormContainer';
 
 const CountrySearch = (props) => {
@@ -10,13 +10,13 @@ const CountrySearch = (props) => {
   const { data } = props
   const [customSelectValue, setCustomSelectValue] = useState('50');
   
-  const handleSelectChange = (event) => {
+  const handleListClipping = (event) => {
     setCustomSelectValue(event.target.value);
     CountriesList.slice(0, `${event.target.value}`);
   };
   
   const CountriesList = data.map(country => (
-    <Country country={country} key={country.numericCode} />
+    <SearchResult country={country} key={country.numericCode} />
   ));
 
   return (
@@ -26,12 +26,13 @@ const CountrySearch = (props) => {
 
         <SearchFormContainer
           countriesData={props}
-          handleSelectChange={handleSelectChange}
+          handleListClipping={handleListClipping}
         />
 
         <ul className='list'>
           {CountriesList.slice(0, `${customSelectValue}`)}
         </ul>
+
       </div>
     </>
   );

@@ -24,10 +24,10 @@ const SearchForm = (props) => {
     event.target.value === ''
     ? countriesData.changeData([])
     : countriesApi(event.target.value)
-        .then(res => {
-          countriesData.changeData(res);
-        })
-        .catch(err => console.log(err));
+      .then(res => {
+        countriesData.changeData(res);
+      })
+      .catch(err => {console.log(err)});
   }
 
   return (
@@ -43,7 +43,7 @@ const SearchForm = (props) => {
           value={inputValue}
           className='input'
         />
-        <ResultList onChange={props.handleSelectChange} />
+        <ResultList onChange={props.handleListClipping} />
       </form>
     </>
   )
