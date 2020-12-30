@@ -33,7 +33,6 @@ const CountrySearch = (props) => {
           {CountriesList.slice(0, `${customSelectValue}`)}
         </ul>
       </div>
-      <WorldMap />
     </>
   );
 };

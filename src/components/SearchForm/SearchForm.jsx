@@ -25,13 +25,15 @@ const SearchForm = (props) => {
     toggleIsFetching(true);
 
     event.target.value === ''
-    ? countriesData.changeData([])
+    ? (countriesData.changeData([]) && toggleIsFetching(false))
     : countriesApi(event.target.value)
       .then(res => {
         countriesData.changeData(res);
         toggleIsFetching(false);
       })
       .catch(err => {console.log(err)});
+
+    
   }
 
   return (
