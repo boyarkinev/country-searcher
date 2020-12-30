@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/country-searcher/static/css/main.c464b437.chunk.css",
-    "main.js": "/country-searcher/static/js/main.c5b30505.chunk.js",
-    "main.js.map": "/country-searcher/static/js/main.c5b30505.chunk.js.map",
+    "main.css": "/country-searcher/static/css/main.0bf13e2b.chunk.css",
+    "main.js": "/country-searcher/static/js/main.5906bdd6.chunk.js",
+    "main.js.map": "/country-searcher/static/js/main.5906bdd6.chunk.js.map",
     "runtime-main.js": "/country-searcher/static/js/runtime-main.552af494.js",
     "runtime-main.js.map": "/country-searcher/static/js/runtime-main.552af494.js.map",
-    "static/js/2.30f10248.chunk.js": "/country-searcher/static/js/2.30f10248.chunk.js",
-    "static/js/2.30f10248.chunk.js.map": "/country-searcher/static/js/2.30f10248.chunk.js.map",
+    "static/js/2.642bd56a.chunk.js": "/country-searcher/static/js/2.642bd56a.chunk.js",
+    "static/js/2.642bd56a.chunk.js.map": "/country-searcher/static/js/2.642bd56a.chunk.js.map",
     "index.html": "/country-searcher/index.html",
-    "static/css/main.c464b437.chunk.css.map": "/country-searcher/static/css/main.c464b437.chunk.css.map",
-    "static/js/2.30f10248.chunk.js.LICENSE.txt": "/country-searcher/static/js/2.30f10248.chunk.js.LICENSE.txt"
+    "static/css/main.0bf13e2b.chunk.css.map": "/country-searcher/static/css/main.0bf13e2b.chunk.css.map",
+    "static/js/2.642bd56a.chunk.js.LICENSE.txt": "/country-searcher/static/js/2.642bd56a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.552af494.js",
-    "static/js/2.30f10248.chunk.js",
-    "static/css/main.c464b437.chunk.css",
-    "static/js/main.c5b30505.chunk.js"
+    "static/js/2.642bd56a.chunk.js",
+    "static/css/main.0bf13e2b.chunk.css",
+    "static/js/main.5906bdd6.chunk.js"
   ]
 }
