@@ -5,8 +5,6 @@ import CountryDetails from '../CountryDetails/CountryDetails';
 
 const SearchResult = (props) => {
 
-  // console.log(props)
-
   const { name, capital, flag } = props.country;
   const [ isActive, setIsActive ] = useState(false);
   
@@ -18,7 +16,7 @@ const SearchResult = (props) => {
 
   return (
     <>
-    <li className='item-container' onClick={handleCleanSearch}>
+    <li className='item-container' onClick={handleCleanSearch} onKeyPress={handleCleanSearch} tabIndex='0'>
       <p className='text'>{name}</p>
       <p className='text'>{capital}</p>
       <img src={flag} alt='Flag' className='flag' />

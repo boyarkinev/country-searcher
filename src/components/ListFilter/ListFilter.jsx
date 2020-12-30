@@ -1,8 +1,8 @@
-import './ResultList.css'
+import './ListFilter.css'
 
 import React from 'react';
 
-const ResultList = (props) => {
+const ListFilter = (props) => {
 
   return (
     <select className='select' defaultValue="50" onChange={props.onChange}>
@@ -13,4 +13,4 @@ const ResultList = (props) => {
   );
 };
 
-export default ResultList;
+export default ListFilter;

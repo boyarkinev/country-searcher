@@ -4,6 +4,7 @@ const mapStateToProps = (component) => {
 			return state => {
 				return {
 					inputValue: state.input.inputValue,
+					isFetching: state.fetching.isFetching,
 				}
 			};
 		}

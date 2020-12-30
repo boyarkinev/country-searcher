@@ -1,9 +1,9 @@
-import CHANGE_COUNTRIES_DATA from '../actions/changeCountriesData';
+import CHANGE_COUNTRIES_DATA_ACTION from '../actions/changeCountriesDataAction';
 
-const changeCountriesDataActionCreator = data => {
+const changeCountriesDataActionCreator = (data) => {
   return { 
-    type: CHANGE_COUNTRIES_DATA,
-    payload: data
+    type: CHANGE_COUNTRIES_DATA_ACTION,
+    payload: data,
   };
 }
 

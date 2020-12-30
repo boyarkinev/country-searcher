@@ -4,8 +4,7 @@
   grid-template-areas:
   'message message'
   'search quantity'
-  'spinner spinner'
-  'list list';
+  'spinner spinner';
   grid-area: search;
   column-gap: 15px;
   row-gap: 15px;
@@ -38,4 +37,9 @@
 .warn {
   color: red;
   text-decoration: underline;  
+}
+
+.preloader {
+  height: 10px;
+  grid-area: spinner;
 }

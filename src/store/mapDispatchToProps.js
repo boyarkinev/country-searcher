@@ -1,6 +1,7 @@
 import { bindActionCreators } from 'redux';
 import changeInputActionCreator from './actionCreators/changeInputActionCreator';
 import changeCountriesDataActionCreator from './actionCreators/changeCountriesDataActionCreator';
+import toggleIsFetchingActionCreator from './actionCreators/toggleIsFetchingActionCreator';
 
 const mapDispatchToProps = (component) => {
 	switch (component) {
@@ -8,6 +9,7 @@ const mapDispatchToProps = (component) => {
 			return dispatch => {
 				return {
 					changeInputValue: bindActionCreators(changeInputActionCreator, dispatch),
+					toggleIsFetching: bindActionCreators(toggleIsFetchingActionCreator, dispatch),
 				};
 			}
 		}

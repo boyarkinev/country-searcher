@@ -1,14 +1,15 @@
 import './SearchForm.css'
 
 import React, { useState } from 'react';
-import ResultList from '../ResultList/ResultList'
+import ListFilter from '../ListFilter/ListFilter'
 import isEng from '../../utils/validators';
 import cn from 'classnames';
 import countriesApi from '../../services/countriesApi';
+import Preloader from '../../commons/Preloader/Preloader';
 
 const SearchForm = (props) => {
 
-  const { inputValue, changeInputValue, countriesData } = props;
+  const { inputValue, changeInputValue, countriesData, toggleIsFetching, isFetching } = props;
   const [ isActive, setIsActive ] = useState(false);
 
   const handleInputChange = (event) => {
@@ -21,21 +22,24 @@ const SearchForm = (props) => {
 
     changeInputValue(event.target.value)
 
+    toggleIsFetching(true);
+
     event.target.value === ''
     ? countriesData.changeData([])
     : countriesApi(event.target.value)
       .then(res => {
         countriesData.changeData(res);
+        toggleIsFetching(false);
       })
       .catch(err => {console.log(err)});
   }
 
   return (
     <>
+      <form className='form'>
       <span className={cn('message-rule', { warn: isActive })}>
         The text must be typed in Latin letters
       </span>
-      <form className='form'>
         <input
           type='text'
           placeholder='Search...'
@@ -43,7 +47,10 @@ const SearchForm = (props) => {
           value={inputValue}
           className='input'
         />
-        <ResultList onChange={props.handleListClipping} />
+        <ListFilter onChange={props.handleListClipping} />
+        <div className='preloader'>
+          { isFetching && <Preloader /> }
+        </div>
       </form>
     </>
   )

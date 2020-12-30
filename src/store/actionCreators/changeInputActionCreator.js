@@ -1,8 +1,8 @@
-import CHANGE_INPUT_VALUE_CATION from '../actions/changeInputValueAction';
+import CHANGE_INPUT_VALUE_ACTION from '../actions/changeInputValueAction';
 
 const changeInputActionCreator = inputValue => {
   return { 
-    type: CHANGE_INPUT_VALUE_CATION,
+    type: CHANGE_INPUT_VALUE_ACTION,
     payload: inputValue
   };
 }

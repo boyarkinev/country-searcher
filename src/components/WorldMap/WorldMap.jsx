@@ -1,4 +1,5 @@
-import './WorldMap.css'
+import './WorldMap.css';
+import world from '../../images/world.svg';
 
 import React from 'react';
 
@@ -6,7 +7,7 @@ const WorldMap = (props) => {
 
   return (
     <>
-      <img src={props.world} alt="World Map" className='map-container'/>
+      <img src={world} alt="World Map" className='map-container'/>
     </>
   )
 }

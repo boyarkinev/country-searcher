@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 
 import SearchResult from '../SearchResult/SearchResult';
 import SearchFormContainer from '../SearchForm/SearchFormContainer';
+import WorldMap from '../WorldMap/WorldMap';
 
 const CountrySearch = (props) => {
 
@@ -28,12 +29,11 @@ const CountrySearch = (props) => {
           countriesData={props}
           handleListClipping={handleListClipping}
         />
-
         <ul className='list'>
           {CountriesList.slice(0, `${customSelectValue}`)}
         </ul>
-
       </div>
+      <WorldMap />
     </>
   );
 };

@@ -6,7 +6,6 @@ import BarLoader from "react-spinners/BarLoader";
 const override = css`
   display: block;
   margin: 0 auto;
-  border-color: red;
   border-radius: 2px;
 `;
 
