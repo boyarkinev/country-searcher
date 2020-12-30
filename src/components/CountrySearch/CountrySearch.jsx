@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 
 import SearchResult from '../SearchResult/SearchResult';
 import SearchFormContainer from '../SearchForm/SearchFormContainer';
-import WorldMap from '../WorldMap/WorldMap';
 
 const CountrySearch = (props) => {
 

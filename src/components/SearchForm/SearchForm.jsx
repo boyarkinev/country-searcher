@@ -5,7 +5,7 @@ import ListFilter from '../ListFilter/ListFilter'
 import isEng from '../../utils/validators';
 import cn from 'classnames';
 import countriesApi from '../../services/countriesApi';
-import Preloader from '../../commons/Preloader/Preloader';
+import preloader from '../../images/preloader.svg';
 
 const SearchForm = (props) => {
 
@@ -32,8 +32,6 @@ const SearchForm = (props) => {
         toggleIsFetching(false);
       })
       .catch(err => {console.log(err)});
-
-    
   }
 
   return (
@@ -51,7 +49,7 @@ const SearchForm = (props) => {
         />
         <ListFilter onChange={props.handleListClipping} />
         <div className='preloader'>
-          { isFetching && <Preloader /> }
+          { isFetching && <img src={preloader} alt='Preloader' /> }
         </div>
       </form>
     </>
