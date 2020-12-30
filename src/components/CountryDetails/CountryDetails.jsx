@@ -9,7 +9,7 @@ const CountryDetails = (props) => {
 
   return (
     <>
-      <ul className={cn('search-result', { isShown: isActive })}>
+      <ul className={cn('search-result desktop', { isShown: isActive })}>
         <li className='search-result__header'>Region</li>
         <li className='search-result__header'>Population</li>
         <li className='search-result__header'>Area</li>
@@ -21,11 +21,30 @@ const CountryDetails = (props) => {
         <li className='search-result__text'>{country.area}</li>
         <li className='search-result__text'>
           {country.timezones.map(timezone => (
-            <p className='search-result__text'>{timezone}</p>
+            <p className='search-result__text' key={timezone} >{timezone}</p>
           ))}
         </li>
         <li className='search-result__text'>{country.alpha2Code}</li>
         <li className='search-result__text'>{country.topLevelDomain}</li>
+      </ul>
+
+      <ul className={cn('search-result mobile', { isShown: isActive })}>
+        <li className='search-result__header mobile'>Region</li>
+        <li className='search-result__text mobile'>{country.region}</li>
+        <li className='search-result__header mobile'>Population</li>
+        <li className='search-result__text mobile'>{country.population}</li>
+        <li className='search-result__header mobile'>Area</li>
+        <li className='search-result__text mobile'>{country.area}</li>
+        <li className='search-result__header mobile'>Time Zones</li>
+        <li className='search-result__text mobile'>
+          {country.timezones.map(timezone => (
+            <p className='search-result__text' key={timezone} >{timezone}</p>
+          ))}
+        </li>
+        <li className='search-result__header mobile'>Code</li>
+        <li className='search-result__text mobile'>{country.alpha2Code}</li>
+        <li className='search-result__header mobile'>Domain</li>
+        <li className='search-result__text mobile'>{country.topLevelDomain}</li>
       </ul>
     </>
   );
