@@ -7,6 +7,8 @@ const CountryDetails = (props) => {
 
   const { country, isActive } = props;
 
+  let formatter = new Intl.NumberFormat();
+
   return (
     <>
       <ul className={cn('search-result desktop', { isShown: isActive })}>
@@ -17,8 +19,8 @@ const CountryDetails = (props) => {
         <li className='search-result__header'>Code</li>
         <li className='search-result__header'>Domain</li>
         <li className='search-result__text'>{country.region}</li>
-        <li className='search-result__text'>{country.population}</li>
-        <li className='search-result__text'>{country.area}</li>
+        <li className='search-result__text'>{formatter.format(country.population)}</li>
+        <li className='search-result__text'>{formatter.format(country.area)}</li>
         <li className='search-result__text'>
           {country.timezones.map(timezone => (
             <p className='search-result__text' key={timezone} >{timezone}</p>
@@ -32,9 +34,9 @@ const CountryDetails = (props) => {
         <li className='search-result__header mobile'>Region</li>
         <li className='search-result__text mobile'>{country.region}</li>
         <li className='search-result__header mobile'>Population</li>
-        <li className='search-result__text mobile'>{country.population}</li>
+        <li className='search-result__text mobile'>{formatter.format(country.population)}</li>
         <li className='search-result__header mobile'>Area</li>
-        <li className='search-result__text mobile'>{country.area}</li>
+        <li className='search-result__text mobile'>{formatter.format(country.area)}</li>
         <li className='search-result__header mobile'>Time Zones</li>
         <li className='search-result__text mobile'>
           {country.timezones.map(timezone => (
