@@ -4,7 +4,6 @@ import React from 'react';
 import cn from 'classnames';
 
 const CountryDetails = ({ country, isActive }) => {
-	console.log('🚀 ~ country', country);
 	let formatter = new Intl.NumberFormat();
 
 	return (
