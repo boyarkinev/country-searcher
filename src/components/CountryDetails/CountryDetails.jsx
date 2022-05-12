@@ -4,6 +4,7 @@ import React from 'react';
 import cn from 'classnames';
 
 const CountryDetails = ({ country, isActive }) => {
+	console.log('🚀 ~ country', country);
 	let formatter = new Intl.NumberFormat();
 
 	return (
@@ -30,7 +31,7 @@ const CountryDetails = ({ country, isActive }) => {
 					))}
 				</li>
 				<li className='search-result__text'>{country.ccn3}</li>
-				<li className='search-result__text'>{country.cca2}</li>
+				<li className='search-result__text'>{country.tld}</li>
 			</ul>
 
 			<ul className={cn('search-result mobile', { isShown: isActive })}>
@@ -55,7 +56,7 @@ const CountryDetails = ({ country, isActive }) => {
 				<li className='search-result__header mobile'>Code</li>
 				<li className='search-result__text mobile'>{country.ccn3}</li>
 				<li className='search-result__header mobile'>Domain</li>
-				<li className='search-result__text mobile'>{country.cca2}</li>
+				<li className='search-result__text mobile'>{country.tld}</li>
 			</ul>
 		</>
 	);
