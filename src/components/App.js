@@ -4,7 +4,7 @@ import React from 'react';
 
 import CountrySearchContainer from './CountrySearch/CountrySearchContainer';
 
-const App = (props) => {
+const App = () => {
 
   return (
     <div className='App'>
