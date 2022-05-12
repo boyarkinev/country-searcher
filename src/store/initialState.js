@@ -1,7 +1,7 @@
 const initialState = {
-  inputValue: '',
-  countriesData: [],
-  isFetching: false,
+	inputValue: '',
+	countriesData: [],
+	isFetching: false,
 };
 
 export default initialState;
