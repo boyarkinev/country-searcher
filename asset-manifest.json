@@ -1,21 +1,14 @@
 {
   "files": {
-    "main.css": "/country-searcher/static/css/main.de234e5a.chunk.css",
-    "main.js": "/country-searcher/static/js/main.7c10eda4.chunk.js",
-    "main.js.map": "/country-searcher/static/js/main.7c10eda4.chunk.js.map",
-    "runtime-main.js": "/country-searcher/static/js/runtime-main.552af494.js",
-    "runtime-main.js.map": "/country-searcher/static/js/runtime-main.552af494.js.map",
-    "static/js/2.ecafeffb.chunk.js": "/country-searcher/static/js/2.ecafeffb.chunk.js",
-    "static/js/2.ecafeffb.chunk.js.map": "/country-searcher/static/js/2.ecafeffb.chunk.js.map",
+    "main.css": "/country-searcher/static/css/main.6df1e006.css",
+    "main.js": "/country-searcher/static/js/main.59d21c65.js",
+    "static/media/preloader.svg": "/country-searcher/static/media/preloader.01c4af2a370f8bcfbbe63a26b728cff9.svg",
     "index.html": "/country-searcher/index.html",
-    "static/css/main.de234e5a.chunk.css.map": "/country-searcher/static/css/main.de234e5a.chunk.css.map",
-    "static/js/2.ecafeffb.chunk.js.LICENSE.txt": "/country-searcher/static/js/2.ecafeffb.chunk.js.LICENSE.txt",
-    "static/media/preloader.7ce68684.svg": "/country-searcher/static/media/preloader.7ce68684.svg"
+    "main.6df1e006.css.map": "/country-searcher/static/css/main.6df1e006.css.map",
+    "main.59d21c65.js.map": "/country-searcher/static/js/main.59d21c65.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.552af494.js",
-    "static/js/2.ecafeffb.chunk.js",
-    "static/css/main.de234e5a.chunk.css",
-    "static/js/main.7c10eda4.chunk.js"
+    "static/css/main.6df1e006.css",
+    "static/js/main.59d21c65.js"
   ]
 }
